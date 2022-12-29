@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var s=new Set()
+            s.add('a')
+            s.add('b')
+            s.add('c')
+            console.log(s)
+            console.log(s.delete('d'))
+            console.log(s.delete('c '))
+            console.log(s)
+            console.log(s.has('b'))
+            s.forEach(print)
+            function print(ele)
+            {
+                console.log(ele)
+            }
+            console.log("test")
+            console.log(s.values())
+            for(i=0;i>s.size();i++){
+                console.log(s[i])   
+            }
+        </script>
+    </body>
+</html>

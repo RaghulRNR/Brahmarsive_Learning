@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function ConvertingJsonToString(response_data)
+{
+    s=""
+    for(i=0;i<5;i++){
+        
+        s=s+i
+
+
+    }
+    return s
+}
+function loadDoc() {
+    console.log(1)
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    console.log(5)
+    response_data=JSON.parse(this.responseText)
+    console.log(response_data)
+    document.getElementById("demo").innerHTML = ConvertingJsonToString(response_data)
+
+
+    
+    console.log(6)
+  }
+  console.log(2)
+  xhttp.open("GET", "https://petstore.swagger.io/v2/store/inventory");
+  xhttp.open("GET", "https://petstore.swagger.io/v2/pet/findByStatus?status=available")
+  console.log(3)
+  xhttp.send();
+  console.log(4)
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var text="Please locate where 'locate' occurs!"
+            console.log(text.indexOf("locate"))
+            console.log(text.indexOf("test"))
+            console.log(text.lastIndexOf("locate"))
+            //search
+            x="locate"
+            console.log(text.search(x))
+            text1 = "The rain in SPAIN stays mainly in the plain";
+            matcText=text1.match("ain")
+            console.log(matcText)
+            console.log(text1.match("ain"))
+            matcText=text1.matchAll("ain")
+            console.log(matcText)
+            console.log(Array.from(matcText))
+        </script>
+    </body>
+</html>

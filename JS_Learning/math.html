@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Math demo</h1>
+        <p id="pi" ></p>
+        <p id="E"></p>
+        <p id="sqrt2"></p>
+        <p id="sqrt1_2"></p>
+        <p id="log2"></p>
+        <p id="log10"></p>
+        <p id="round"></p>
+        <p id="floor"></p>
+        <p id="trunc"></p>
+        <p id="ceil"></p>
+        <p id="sign"></p>
+        <p id="pow"></p>
+        <p id="sqrt"></p>
+        <p id="abs"></p>
+        <p id="min"></p>
+        <p id="max"></p>
+        <p id="random"></p>
+        
+
+        <script>
+
+            document.getElementById("pi").innerHTML="PI="+Math.PI
+            document.getElementById("E").innerHTML="Euler's Number="+Math.E
+            document.getElementById("sqrt2").innerHTML="SQRT of 2="+Math.SQRT2
+            document.getElementById("sqrt1_2").innerHTML="square root of 1/2="+Math.SQRT1_2
+            document.getElementById("log2").innerHTML="log of 2="+Math.LN2
+            document.getElementById("sqrt2").innerHTML="log of 10="+Math.LN10
+            var x=10.23
+            document.getElementById("round").innerHTML="math round= "+Math.round(x)
+            document.getElementById("floor").innerHTML="math floor= "+Math.floor(x)
+            document.getElementById("trunc").innerHTML="math trunc= "+Math.trunc(x)
+            document.getElementById("ceil").innerHTML="math ceil= "+Math.ceil(x)
+            var y=-4    
+            document.getElementById("sign").innerHTML="math sign= "+Math.sign(y)
+            document.getElementById("pow").innerHTML="math pow(2,3)= "+Math.pow(2,3)
+            document.getElementById("sqrt").innerHTML="math sqrt(36) =  "+Math.sqrt(36)
+            document.getElementById("abs").innerHTML="math abs(-4.34) =  "+Math.abs(-4.34)
+            document.getElementById("min").innerHTML="math min="+Math.min(...[10,20,30])
+            document.getElementById("max").innerHTML="math max="+Math.max(...[10,20,30])
+            document.getElementById("random").innerHTML="math random="+Math.random()
+
+
+
+        </script>
+    </body>
+</html>

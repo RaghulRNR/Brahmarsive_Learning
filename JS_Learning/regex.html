@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            var text="is rahul is rahul is"
+            res_regex_i=text.match(/Rahul/i)
+            console.log(res_regex_i)
+
+            res_regex_g=text.match(/rahul/g)
+            console.log(res_regex_g)
+
+            var text="is rahul \n is \n rahul \n is A a"
+            res_regex_m=text.match(/^is/m)
+            console.log(res_regex_m)
+
+            ResRegexBracketsChar=text.match(/[a,r]/ig)
+            console.log(ResRegexBracketsChar)
+
+            var text="123456789011121314151617181912021222323"
+            ResRegexBracketsChar=text.match(/[1-3]/g)
+            console.log(ResRegexBracketsChar)
+
+            var text="xyzxyz"
+            ResRegexBracketsAlternate=text.match(/(x|y)/g)
+            console.log(ResRegexBracketsAlternate)
+
+             var text="abc123def456"
+            ResRegexFindNum=text.match(/\d/g)
+            console.log(ResRegexFindNum)
+
+            var text=" rahul rahul rahul rnr "
+            ResRegexFindSpace=text.match(/\s/g)
+            console.log(ResRegexFindSpace)
+
+            var text="god has no mercy so what they are god"
+            ResRegexMatchStart=text.match(/\bgod/g)
+            console.log(ResRegexMatchStart)
+
+            var text="god has no mercy so what they are god,had test had"
+            ResRegexMatchEnd=text.match(/\bhad/g)
+            console.log(ResRegexMatchEnd)
+
+            var text="n nod next nn nest none"
+            res=text.match(/n+/g)
+            console.log(res)
+
+            var text="n nod next nn nest none"
+            res=text.match(/n*/g)
+            console.log(res)
+
+            var text="n nod next nn nest none"
+            res=text.match(/n?/g)
+            console.log(res)
+
+            var text="tt tt tide trust test"
+            res=text.match(/n*/g)
+            console.log(res)
+
+            var text="tt tt tide trust test"
+            res=text.match(/n?/g)
+            console.log(res)
+            
+        </script>
+    </body>
+</html>

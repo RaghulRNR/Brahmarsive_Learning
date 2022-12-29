@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            for(i=0;i<10;i++){
+                console.log(i)
+            }
+            var allDetails={personalDetails:{firstName:"Rahul",lastName:"Natarajan",place:"Sathyamangalam"},
+                    professional_details:{company:'Nallas',location:'Coimbatore'}}
+            var details={firstName:"Rahul",lastName:"Natarajan",place:"Sathyamangalam"}
+            for(key in details){
+                console.log(key+'='+details[key])
+            }
+            for(key in allDetails){
+                console.log(allDetails[key])
+            }
+            var arr=[10,20,30,40,50]
+            for(x in arr){
+                console.log(x)
+            }
+            for(x of arr){
+                console.log(x)
+            }
+        var text="Javascript"
+        for(x of text){
+            console.log(x)
+        }
+        var flag=true
+        var i=0;
+        while(flag){
+            if (i>5){
+                flag=false;
+            }
+            else{
+            console.log(i)
+            i++}
+        }
+        </script>
+    </body>
+</html>

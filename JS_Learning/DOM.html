@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <body onload="onfun(this)">
+
+        <h1 id="test">Header1</h1>
+        <h2 style="color: blue;">This is h2</h2>
+        <div class="tst">
+            <p>this is class </p>
+        </div>
+        <br>
+        <form id="frm1">
+            FirstName:<input type="text" name="fname" value="rahul"><br>
+            <br>
+            LastName:<input type="text" name="lname" value="N">
+        </form><br>
+        <img src="t1.png" alt="src not found">
+        <h1 id="time"></h1>
+        <form name="myForm"  onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+            </form>
+        <h1 id="cc" >color change</h1>
+        <button onclick="colc()" >click me</button>
+
+        <h1 onclick="this.innerHTML='Thanks for clicling me'">click mee</h1>
+        <h2 onclick="ast(this)" >click it</h2>
+        <h2  id="all">click it</h2>
+        <p id="mouse" onmouseover="mouseoverfun(this)" onmouseout="mouseoutfun(this)">Mouse Over me</p>
+
+
+        <script>
+            t=document.getElementById("test");
+            t.innerHTML="Header Replaced By id";
+
+            //Tag name
+            t1=document.getElementsByTagName("h2")//tagname return in arrays
+            t1[0].innerHTML="Changed by using Tagname";
+
+           // t1[0].style.property="color:red;"
+           t1[0].setAttribute("style", "color:red")
+
+           //class
+           c=document.getElementsByClassName("tst")
+           c[0].innerHTML="This Paragraph is replace by className"
+            
+           //querySelectorAll
+           qa=document.querySelectorAll(".tst")
+           qa[0].innerHTML="This Paragraph is replace by Js and modified by queyselectorALL"
+
+           //querySelector
+           q=document.querySelector("#test")
+           q.innerHTML="Header Replaced By ID and again by queryselector "
+
+           //forms
+           f=document.forms["frm1"]
+            for(var i=0;i<f.length;i++)
+            {
+                console.log(f.elements[i].value)
+            }
+
+            //Changing the Value of an Attribute
+            document.getElementsByTagName("img")[0].alt="src not found by DOM"
+
+            //Dynamic HTML content
+            document.getElementById("time").innerHTML=Date()
+            document.write("this is from document.write()")
+
+            //JavaScript Form Validation
+            function validateForm() {
+                let x = document.forms["myForm"]["fname"].value;
+                if (x <10) {
+                    alert("please enter the value less than 11");
+
+                }
+            }
+
+            //Changing HTML Style
+            t1[0].style.color="yellow"
+
+            function colc(){
+                console.log("test")
+                z=document.getElementById("cc")
+                z.style.color="green"
+            }
+            function ast(id)
+            {
+                id.innerHTML="you clicked me...!"
+            }
+
+            //Reacting to Events
+            function onfun(id)
+            {
+                console.log('Test_onfun')
+                id.style.background="red"
+            }
+            function mouseoverfun(x){
+                console.log("mouseoverfun")
+                //document.getElementById("mouse")
+                x.innerHTML="Mouse-Out"
+
+            }
+            function mouseoutfun(x){
+                console.log("mouseoutfun")
+                //m=document.getElementById("mouse")
+                x.innerHTML="Mouse-Over"
+             }
+             function mouseoverfuna(){
+                console.log("a-mouseoverfun")
+                x=document.getElementById("all")
+                x.innerHTML="Mouse-Out" 
+
+            }
+            function mouseoutfuna(){
+                console.log("a-mouseoutfun")
+                x=document.getElementById("all")
+                x.innerHTML="Mouse-Over"
+             }
+             function asta()
+            {
+                console.log("asta")
+                x=document.getElementById("all")
+                x.innerHTML="you clicked me...!"
+            }
+
+             //JavaScript HTML DOM EventListener
+             el=document.getElementById("all")
+             el.addEventListener("click",asta)
+             el.addEventListener("mouseover",mouseoverfuna)
+             el.addEventListener("mouseout",mouseoutfuna)
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Js promise demo</h1>
+        <p id="demo"></p>
+        <p id="ex"></p>
+        <p id="file"></p>
+        <script>
+            x=Number(prompt("enter the value"))
+            var PromiseDemo=new Promise(function(failure,Success){
+
+                if(x<=5){
+                    Success("success")
+                }
+                else
+                {
+                    failure("failure")
+                }
+
+
+
+            })
+
+        PromiseDemo.then(function Success(value){
+            document.getElementById("demo").innerHTML=value
+        },function failure(value){
+            document.getElementById("demo").innerHTML=value
+        })
+
+        //example-2
+        let myPromise = new Promise(function(myResolve, myReject) {
+                setTimeout( myResolve("I love You !!"), 3000);
+                });
+
+                myPromise.then(function(value) {
+                document.getElementById("ex").innerHTML = value;
+                });
+        
+
+        //file example
+        let filepromise=new Promise(function(found,notfound){
+            var req= new XMLHttpRequest()
+            //cant able to read local file
+            req.open("GET","https://petstore.swagger.io/v2/store/inventory")
+            req.send()
+            req.onload=function()
+            {
+                console.log("test")
+                if(req.status==200){
+                    found("File is there in current location")
+                }
+                else{
+                    notfound("File Not found")
+                }
+            }
+        })
+        filepromise.then(
+            function found(value){
+                document.getElementById("file").innerHTML = value;
+            },
+            function notfound(value){
+                document.getElementById("file").innerHTML = value;
+            }
+        )
+        </script>
+    </body>
+</html>

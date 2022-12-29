@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+                function all(firstname,lastname,place)
+                {
+                    return firstname+" "+lastname+" "+place
+                }
+                var details={firstName:"Rahul",lastName:"Natarajan",place:"Sathyamangalam"}
+                
+                console.log(details)
+                console.log(details.firstName)
+                console.log(details['lastName'])
+                // Nested Objects
+                var allDetails={personalDetails:{firstName:"Rahul",lastName:"Natarajan",place:"Sathyamangalam"},
+                    professional_details:{company:'Nallas',location:'Coimbatore'}}
+                console.log(allDetails.personalDetails.firstName)
+                console.log(allDetails.professional_details.company)
+
+                //Object Methods
+                //*--------------->Declaring objects methods without Anymonus functiom */
+                /*var objFun={firstname:"Rahul",lastname:"Natarajan",place:"Sathyamangalam",con:all(this.firstname,this.lastname,this.place)}*/
+
+               var objFun={firstName:"Rahul",lastName:"Natarajan",place:"Sathyamangalam",fullName : function() {
+                    return this.firstName + " " + this.lastName;
+  }}
+                console.log("-->"+objFun.fullName(  ))  
+
+                myObj = {
+                    name: "John",
+                    age: 30,
+                    cars: [
+                        {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+                        {name:"BMW", models:["320", "X3", "X5"]},
+                        {name:"Fiat", models:["500", "Panda"]}
+                    ]}
+                    for (x in myObj.cars)
+                    {   console.log(myObj.cars[x].name)
+                        for(y in myObj.cars[x].models)
+                        {
+                            console.log(myObj.cars[x].models[y])
+                        }
+                    }
+                console.log(myObj.cars[0].models[0])
+                
+        </script>
+    </body>
+</html>

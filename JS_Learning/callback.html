@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="result"></h1>
+    </body>
+    <script>
+        function call(x,y,callback){
+
+            res=x+y
+            callback(res)
+
+        }
+        function display(res){
+            document.getElementById("result").innerHTML=res
+        }
+        call(10,20,display)
+    </script
+</html>

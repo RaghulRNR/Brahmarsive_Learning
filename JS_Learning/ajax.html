@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Ajax Demo</h1><hr><hr>
+        <p>Will display Api call Results once onload function got executed</p>
+        <h1 id="demo">Will display Api call Results once onload function got executed</h1><hr>
+        <p>this data is displaying from multiple ajax call</p>
+        <h1 id="multiple_demo1"></h1><hr>
+        <h1 id="multiple_demo2"></h1><hr>
+        <script>
+            ///Demo-Ajax//
+            var xxttp=new XMLHttpRequest()
+            xxttp.onload=function() {
+                response_data=JSON.parse(this.responseText)
+                document.getElementById("demo").innerHTML=ConvertToString(response_data)
+            }
+            xxttp.open("GET","https://petstore.swagger.io/v2/store/inventory")
+            xxttp.send()
+
+            function ConvertToString(response_data)
+            {   
+                s=''
+                for(x in response_data)
+                {
+                    s=s+"\n"+x+" = "+response_data[x]
+                }
+                console.log(s)
+                return s
+            }
+
+            ///calling multiple AJax Function
+            function APICallFun(url,callBackFunction,cssid)
+            {
+                xxttp=new XMLHttpRequest()
+                xxttp.onload=function() {callBackFunction(this,cssid)}
+                xxttp.open("GET",url)
+                xxttp.send()
+                
+
+            }
+
+            function multipleAjaxDemo1(x,cssid){
+                response_data=JSON.parse(x.responseText)
+                document.getElementById(cssid).innerHTML=ConvertToString(response_data)
+                
+            }
+
+           APICallFun("https://petstore.swagger.io/v2/store/inventory",multipleAjaxDemo1,"multiple_demo1")
+           APICallFun("https://gorest.co.in/public/v2/users",multipleAjaxDemo1,"multiple_demo2 ")
+           
+
+            //calling get method with parameter 
+
+            APICallFun("https://petstore.swagger.io/v2/pet/findByStatus?status=available",multipleAjaxDemo1,"multiple_demo2")
+            
+        </script>
+    </body>
+</html>

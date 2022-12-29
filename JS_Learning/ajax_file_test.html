@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+<p>Let AJAX change this text.</p>
+
+</div>
+
+<script>
+var xhttp=new XMLHttpRequest()
+xhttp.onreadystatechange = function() {//Call a function when the state changes.
+    if(xhttp.readyState == 4 && xhttp.status == 200) {
+        alert(xhttp.responseText);
+    }
+}
+            xhttp.open("POST", "https://petstore.swagger.io/v2/store/order");
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send('{"id":123,"petId":12345 ,"quantity":2,"shipDate":"2022-12-28T13:19:36.432Z","status":"placed","complete":true}')
+            
+            </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            num=[45, 4, 9, 16, 25];
+            //for Each by anymnouus function
+            num.forEach(function(num) {
+            console.log(num);
+            });
+            //for each by normal function
+            num.forEach(print);
+            function print(ele){
+                console.log(ele)
+            }
+            ///map function
+            newNum=num.map(add)
+            function add(ele,index,num){
+                console.log(num[index])
+                return ele*index
+            }
+            console.log(newNum)
+            //filter function
+            laregerThan15=num.filter(fil)
+            function fil(ele){
+                if (ele>15)
+                {
+                    return ele
+                }
+            }
+            console.log(laregerThan15)
+        </script>
+    </body>
+</html>

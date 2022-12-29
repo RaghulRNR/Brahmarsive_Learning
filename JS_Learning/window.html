@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>The Window Object</h1><hr><hr>
+        
+        <p id="demo"></p><hr>
+        <h3 id ="height"></h3>
+        <h3 id="width"></h3><hr>
+        <h3 id="screenwidth"></h3><hr>
+        <h3 id="screenHeight"></h3><hr>
+        <h3 id="screenAvailwidth"></h3><hr>
+        <h3 id="screenAvailHeight"></h3><hr>
+        <h3 id="locationHerf"></h3><hr>
+        <h3 id="locationHostname"></h3><hr>
+        <h3 id="locationPathName"></h3><hr>
+        <h3 id="locationProtocol"></h3><hr>
+        <input type="button" value="Load New Document" onclick="loadNewDoc()"><hr>
+        <h3 id="cookiesEnabled"></h3><hr>
+        <h3 id="NavigatorAppName"></h3><hr>
+        <h3 id="NavigatorAppCodeName"></h3><hr>
+        <h3 id="NavigatorAppVersion"></h3><hr>
+        <h3 id="NavigatorUserAgent"></h3><hr>
+        <h3 id="NavigatorBrowserPaltform"></h3><hr>
+        <h3 id="confirmBox"></h3><hr>
+        <h3 id="prompt"></h3>
+    
+
+
+
+        
+        <script >
+
+            window.document.getElementById("demo").innerHTML="This paragraph is changed by Document "
+
+            document.getElementById("height").innerHTML="Height="+window.innerHeight
+            document.getElementById("width").innerHTML="Width="+window.innerWidth    
+            //window.open()
+            //console.log(screen.height)
+            document.getElementById("screenwidth").innerHTML="screen width="+window.screen.width
+            document.getElementById("screenHeight").innerHTML="screen Height="+window.screen.width
+            document.getElementById("screenAvailwidth").innerHTML="screenAvailWidth="+window.screen.availWidth
+            document.getElementById("screenAvailHeight").innerHTML="screenAvailHeight="+window.screen.availHeight
+            document.getElementById("locationHerf").innerHTML="LocationHerf="+window.location.href
+            document.getElementById("locationHostname").innerHTML="return internet hostname | LocationHostname="+window.location.hostname
+            document.getElementById("locationPathName").innerHTML="Location PathName="+window.location.pathname
+            document.getElementById("locationProtocol").innerHTML="Location Protocol="+window.location.protocol
+            
+            function loadNewDoc()
+            {
+                window.location.assign("https://rahulrnr.pythonanywhere.com/")
+
+            }
+
+            document.getElementById("cookiesEnabled").innerHTML="Cookies Enabled="+window.navigator.cookieEnabled
+            document.getElementById("NavigatorAppName").innerHTML="Navigator AppName="+window.navigator.appName
+            document.getElementById("NavigatorAppCodeName").innerHTML="Navigator AppCodeName="+window.navigator.appCodeName
+            document.getElementById("NavigatorAppVersion").innerHTML="Navigator AppVersion="+window.navigator.appVersion
+            document.getElementById("NavigatorUserAgent").innerHTML="Navigator UserAgent="+window.navigator.userAgent
+            document.getElementById("NavigatorBrowserPaltform").innerHTML="Navigator Browser Platform="+window.navigator.platform
+            x=window.confirm("demo for Confirm box")
+            document.getElementById("confirmBox").innerHTML="you confirmed with "+x
+            document.getElementById("prompt").innerHTML="Hello "+window.prompt("Enter your Name:","Rahul_rnr")
+
+            //cookies
+
+            document.cookie="{username:rahul}"
+            document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+            console.log(document.cookie)
+
+
+
+        </script>
+    </body>
+</html>

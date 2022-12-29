@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Output</h1>
+        <script>  
+            const pi=3.14;
+            var a=10;
+            //const pi=3.14;// Identifier 'pi' has already been declared
+            //pi =3.15  //Uncaught TypeError: Assignment to constant variable       
+            function Output()
+            {   
+                console.log(a)
+                alert(a);
+            }
+           
+            /* let variable */
+            //let b=20;
+            function output2(){
+                //let b=20;//Identifier 'b' has already been declared
+                
+                let b=30;//Cannot access 'b' before initialization at output2 
+                alert(b)
+                console.log(b)
+            }
+            
+            Output()
+            output2()
+            //console.log(b) //ReferenceError: b is not defined
+            
+        </script>
+    </body>
+</html>

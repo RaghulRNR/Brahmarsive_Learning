@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Async Await Demo</h1>
+        <p id="demo"></p>
+        <script>
+            x=Number(prompt("enter the value"))
+            async function ex()
+            {
+                var PromiseDemo=new Promise(function(message){
+
+                    if(x<=5){
+                        console.log(1)
+                        message("success")
+                    }
+                    else
+                    {
+                        console.log(2)
+                        message("failure")
+                    }
+
+
+
+                })
+
+                document.getElementById("demo").innerHTML=await PromiseDemo;
+            }
+            ex()
+           
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            class Person{
+                constructor(name,age){
+                    this.name=name
+                    this.age=age
+                }
+                age_name(reason){
+                    var x=10;
+                    return this.name+" "+this.age+" calling for "+reason+" "+x
+                }
+            }
+            p= new Person("rahul",23)
+            console.log(p.age)
+            console.log(p.name)
+            console.log(p.age_name("war"))
+
+            /////inheritance////
+        
+            class Employee extends Person{
+                constructor(eno,name,age)
+                {    super(name,age)
+                    this.eno=eno
+                   
+                }
+                details(){
+                    return this.name+"=>"+this.age+"=>"+this.age_name("war")+"=>"+this.eno
+                }
+
+            }
+            e=new Employee(123,"rahul",23)
+            console.log(e.details())
+
+            //getter and setter methods
+                class Car {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+                get cnam() {
+                    return this.carname;
+                }
+                set cnam(x) {
+                    this.carname = x;
+                }
+                }
+
+           c= new Car("BMW")
+           c.cnam="Rolex"
+           console.log(c.cnam)
+
+           //static methods
+           class ex{
+            constructor(name,age){
+                this.name=name
+                this.age=age
+
+            }
+            static name_age(c){
+
+                return c.name+'==>'+c.age
+            }
+            static hello(){
+                return "hello"
+            }
+            instance(){
+                return this.name+this.age
+            }
+           }
+           t= new ex("Rahul",23)
+           console.log(t.instance())
+           //console.log(t.hello()) raise error
+           console.log(ex.hello())
+           console.log(ex.name_age(t))
+        </script>
+    </body>
+</html>

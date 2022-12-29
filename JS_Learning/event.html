@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!--on click-->
+        <h1>Commom Events</h1><hr><hr>
+        <button onclick="demo_onclick()">click this buttton </button>
+        <p id="demo_onclick"></p><hr>
+
+        <!--on change-->
+        <input type="radio" id="demo_radio" name="radio" value="Male" onchange="demo_onchange(this.value)">
+        <label for="demo_radio">Male</label>
+        <input type="radio" id="demo_radio" name="radio" value="Female" onchange="demo_onchange(this.value)">
+        <label for="demo_radio">Femlae</label>
+        <p id="demo_onchange"></p><hr>
+
+        <!--MouserOver-->
+            <h3 id="demo_mouseOver" onmouseover="demo_onmouserover(this)" onmouseout="demo_mouseout(this)" >Mouser-Over</h3><hr>
+        
+        <!--OnKeyDown and OnKeyDown-->
+            <p>on keydown and onkeyup demo</p>
+            <input type="text"  id="demo_onkey" onkeydown="demo_onkeydown()" onkeyup="demo_onkeyup()"><hr>
+
+        
+        <script>
+            //onclick
+            function demo_onclick(){
+            document.getElementById("demo_onclick").innerHTML="Demo for on click Event"
+            }
+            //onchange
+            function demo_onchange(value){
+                document.getElementById("demo_onchange").innerHTML="Demo for onchange Event "+value 
+            }
+            //onmouseover
+            function demo_onmouserover(x){
+                x.innerHTML="Mouse-Out"
+            }
+            //onmouseout
+            function demo_mouseout(x){
+                x.innerHTML="Mouse-Over"
+            }
+            //OnKeyDown
+            function demo_onkeydown(){
+                document.getElementById("demo_onkey").style.background="green"
+            }
+            //OnKeyup
+            function demo_onkeyup(){
+                document.getElementById("demo_onkey").style.background="red"
+            }
+
+        </script>
+    </body>
+</html>
