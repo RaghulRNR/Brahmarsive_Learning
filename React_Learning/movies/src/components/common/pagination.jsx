@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types'
 class Pagination extends Component {
     
     render() { 
@@ -8,13 +9,14 @@ class Pagination extends Component {
         
         return (
             <React.Fragment>
-                <ul className="pagination">
+                <ul className="pagination" >
                     {paginationArray.map(
                         page =>  <li 
                         key={page} 
                         className={this.props.currentPage==page?"page-item active":"page-item"}>
                         <a className="page-link" onClick={()=>this.props.paginationClick(page)}>{page}</a></li> )
                     }           
+                   
                    
                   </ul>
             </React.Fragment>
@@ -33,5 +35,10 @@ class Pagination extends Component {
         return arr
     }
 }
- 
+Pagination.propTypes={
+    count:propTypes.number.isRequired,
+    pageSize:propTypes.number.isRequired,
+    currentPage:propTypes.number.isRequired,
+    paginationClick:propTypes.func.isRequired
+}
 export default Pagination;
