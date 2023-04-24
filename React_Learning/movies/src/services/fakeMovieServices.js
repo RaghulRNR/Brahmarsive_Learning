@@ -27,7 +27,7 @@ const movies=[
     {
         _id:"a123rnr104",
         title:"varanam Airayam",
-        genre:{_id:"a123rah101",name:"Love drama"},
+        genre:{_id:"a123rah101",name:"Love"},
         numberInStock:5,
         dailyRentalRate:3.5,
         publishDate:"2022-01-01"
@@ -35,7 +35,7 @@ const movies=[
     {
         _id:"a123rnr105",
         title:"Uttama Villan",
-        genre:{_id:"a123rah105",name:"Emotional Drama"},
+        genre:{_id:"a123rah105",name:"Emotional"},
         numberInStock:8,
         dailyRentalRate:6.5,
         publishDate:"2022-01-01"
@@ -43,7 +43,7 @@ const movies=[
     {
         _id:"a123rnr106",
         title:"Ayudha ezhuthu",
-        genre:{_id:"a123rah106",name:"Political Drama"},
+        genre:{_id:"a123rah106",name:"Political"},
         numberInStock:6,
         dailyRentalRate:2.5,
         publishDate:"2022-01-01"
@@ -53,6 +53,54 @@ const movies=[
         title:"Kaithi",
         genre:{_id:"a123rah107",name:"Action"},
         numberInStock:10,
+        dailyRentalRate:2.5,
+        publishDate:"2022-01-01"
+    },
+    {
+        _id:"a123rnr108",
+        title:"Udhyam-NH4",
+        genre:{_id:"a123rah108",name:"Love"},
+        numberInStock:8,
+        dailyRentalRate:2.5,
+        publishDate:"2022-01-01"
+    },
+    {
+        _id:"a123rnr109",
+        title:"Papanasam",
+        genre:{_id:"a123rah109",name:"Thriller"},
+        numberInStock:8,
+        dailyRentalRate:2.5,
+        publishDate:"2022-01-01"
+    },
+    {
+        _id:"a123rnr110",
+        title:"Raja Rani",
+        genre:{_id:"a123rah110",name:"Love"},
+        numberInStock:8,
+        dailyRentalRate:2.5,
+        publishDate:"2022-01-01"
+    },
+    {
+        _id:"a123rnr111",
+        title:"Managaram",
+        genre:{_id:"a123rah111",name:"Thriller"},
+        numberInStock:8,
+        dailyRentalRate:2.5,
+        publishDate:"2022-01-01"
+    },
+    {
+        _id:"a123rnr112",
+        title:"OK-Ok",
+        genre:{_id:"a123rah112",name:"Comedy"},
+        numberInStock:8,
+        dailyRentalRate:2.5,
+        publishDate:"2022-01-01"
+    },
+    {
+        _id:"a123rnr113",
+        title:"SMS",
+        genre:{_id:"a123rah111",name:"Comedy"},
+        numberInStock:8,
         dailyRentalRate:2.5,
         publishDate:"2022-01-01"
     },
