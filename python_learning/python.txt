@@ -1,0 +1,46 @@
+Basics=>for, while, if, else, do while, switch case and etc
+
+Exception handling
+
+Type declaration (primitive, default)
+
+Scope of the variables and functions-->lcoal scope global scope
+
+String Manipulation
+
+Math operations
+
+Collections -- List, Tuple, Set, Dict and etc.,
+
+Function Creation --dynamic arguments
+
+Access Modifier
+
+Class=>how to write
+
+Abstract Class creation
+
+Inheritance=>types-->single,multiple,multilevel,Hierarchical,hybrid
+
+Polymorphism
+
+Encapsulation
+
+Types of Http methods and where we can use
+
+Query param and Path param
+
+Restful Services using flask
+
+Restful Service with DB connectivity-SQL, no SQL-mongo dB(query),
+
+dB indexing, query optimisation
+
+Decorator
+
+With
+
+Async
+
+Multi-threading Concept
+
